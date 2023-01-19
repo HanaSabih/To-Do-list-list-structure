@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+.containerAll {
+  background-color: #f7f5f7;
+}
+
+span {
+  cursor: pointer;
+}
+
+.toDoItem {
+  background-color: white;
+  margin-bottom: 0.25rem;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.todoCont {
+  display: inline-flex;
+}
+
+.todoChecked {
+  display: none;
+}
+
+.toDoItem button {
+  margin-right: 1rem;
+  font-size: 1.6rem;
+  border: none;
+  background-color: white;
+}
+
+.todoDelete {
+  display: none;
+}
