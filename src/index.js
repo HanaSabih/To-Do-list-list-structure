@@ -1,34 +1,20 @@
 import './style.css';
-// import bootstrap from "bootstrap";
 
-const toDoInput = document.querySelector('#toDoInput');
 const toDoList = document.querySelector('.toDoList');
-const form = document.querySelector('.form');
-// storage
-const addTodStorage = (arrToDos) => {
-  const storage = localStorage.setItem('ToDo', JSON.stringify(arrToDos));
-  return storage;
-};
-
-const getStorage = () => {
-  const storage = localStorage.getItem('ToDo') === null
-    ? []
-    : JSON.parse(localStorage.getItem('ToDo'));
-  return storage;
-};
 
 // array
-const arrToDos = getStorage();
-
-class ToDos {
-  constructor(index = 0, description, completed = false) {
-    this.index = index;
-    this.description = description;
-    this.completed = completed;
-  }
-}
-
-let id = arrToDos.length;
+const arrToDos = [
+  {
+    index: 1,
+    description: 'wash the dishes',
+    completed: false,
+  },
+  {
+    index: 2,
+    description: 'complete to do list project',
+    completed: false,
+  },
+];
 
 const displayToDo = () => {
   const displayToDo = arrToDos.map(
@@ -48,18 +34,7 @@ const displayToDo = () => {
   );
   toDoList.innerHTML = displayToDo.join(' ');
 };
-
+displayToDo();
 window.addEventListener('DOMContentLoaded', () => {
   displayToDo();
-});
-
-form.addEventListener('change', (e) => {
-  e.preventDefault();
-  const ToDoItem = new ToDos(id, toDoInput.value, false);
-  id += 1;
-
-  arrToDos.push(ToDoItem);
-  displayToDo();
-  addTodStorage(arrToDos);
-  console.log(arrToDos);
 });
