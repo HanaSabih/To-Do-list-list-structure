@@ -17,8 +17,7 @@ span {
   margin-bottom: 0.25rem;
   display: flex;
   justify-content: space-between;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding: 0.5rem 1rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -32,10 +31,13 @@ span {
 }
 
 .toDoItem button {
-  margin-right: 1rem;
   font-size: 1.6rem;
   border: none;
   background-color: white;
+}
+
+.toDoItem h3 {
+  margin-left: 1rem;
 }
 
 .todoDelete {
