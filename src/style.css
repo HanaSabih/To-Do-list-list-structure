@@ -7,7 +7,12 @@ body,
 .containerAll {
   background-color: #f7f5f7;
 }
-
+.dNone {
+  display: none;
+}
+.dBlock {
+  display: block;
+}
 span {
   cursor: pointer;
 }
@@ -17,8 +22,7 @@ span {
   margin-bottom: 0.25rem;
   display: flex;
   justify-content: space-between;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding: 0.5rem 1rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -27,17 +31,20 @@ span {
   display: inline-flex;
 }
 
-.todoChecked {
+.checkedBtn,
+.optDel {
   display: none;
 }
 
 .toDoItem button {
-  margin-right: 1rem;
   font-size: 1.6rem;
   border: none;
   background-color: white;
 }
 
-.todoDelete {
-  display: none;
+.toDoItem h3 {
+  margin-left: 1rem;
+}
+.optBtns {
+  display: inline-flex;
 }
