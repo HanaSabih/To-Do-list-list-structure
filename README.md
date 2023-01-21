@@ -71,7 +71,7 @@
 
 
 
-- [Live Demo Link](https://hanasabih.github.io/To-Do-list-list-structure/)
+- [Live Demo Link](https://hanasabih.github.io/To-Do-list-list-structure/dist)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
