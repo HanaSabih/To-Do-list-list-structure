@@ -6,13 +6,31 @@
 body,
 .containerAll {
   background-color: #f7f5f7;
+  margin-top: 4rem;
 }
+
 .dNone {
   display: none;
 }
+
 .dBlock {
   display: block;
 }
+
+.checkedText {
+  -webkit-text-decoration-line: line-through; /* Safari */
+  text-decoration-line: line-through;
+  -moz-text-decoration-line: line-through;
+}
+
+.uncheckedText {
+  -webkit-text-decoration-line: none;
+
+  /* Safari */
+  text-decoration-line: none;
+  -moz-text-decoration-line: none;
+}
+
 span {
   cursor: pointer;
 }
@@ -45,6 +63,7 @@ span {
 .toDoItem h3 {
   margin-left: 1rem;
 }
+
 .optBtns {
   display: inline-flex;
 }

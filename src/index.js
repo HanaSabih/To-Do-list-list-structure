@@ -1,15 +1,18 @@
-import "./style.css";
+import './style.css';
 
-import addTodoInput from "./modules/addTodoInput.js";
-import displayToDo from "./modules/displayToDo.js";
-import deleteBtn from "./modules/buttons/deleteBtn.js";
-import updateIndex from "./modules/updateIndex.js";
-import doneCheck from "./modules/buttons/checkedBtn.js";
-addTodoInput();
+import {
+  displayToDo,
+  checkedTodoS,
+  deleteBtnTodoS,
+  clearAllBtn,
+} from './modules/diplayAll.js';
+import { optionsBtn, closeBtn } from './modules/actionBtn.js';
 
-window.addEventListener("DOMContentLoaded", () => {
-  updateIndex();
+window.addEventListener('DOMContentLoaded', () => {
   displayToDo();
-  deleteBtn();
-  doneCheck();
+  checkedTodoS();
+  optionsBtn();
+  deleteBtnTodoS();
+  closeBtn();
+  clearAllBtn();
 });
