@@ -31,7 +31,7 @@
 
 # 📖To Do list: list structure <a name="about-project"></a>
 
-This is a To Do list: build with a simple HTML list of To Do tasks. This simple web page will be built using webpack and served by a webpack dev server.
+This is a To Do list: build with a simple HTML list of To Do tasks. This simple web page will be built using webpack and served by a webpack dev server, with testing.
 
 ## 🛠 Built With <a name="built-with"></a>
 
