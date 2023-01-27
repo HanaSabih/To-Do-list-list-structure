@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { saveTodo, displayToDo } from '../modules/diplayAll.js';
+import { saveTodo, displayToDo, deleteOneItem } from '../modules/diplayAll.js';
 
 describe('add to List , all has to be completed false and starts with index 0', () => {
   test("add a task 'Task1' to local storage and check if it exists on local storage", () => {
@@ -42,5 +42,31 @@ describe('Test add to DOM function', () => {
     const items = document.querySelectorAll('li');
     // Assert
     expect(items).toHaveLength(3);
+  });
+});
+
+describe("Remove one item from list", () => {
+  test("remove the task2 from the list and check if it's length is equal to 2 and if the index is updated", () => {
+    // Arrange
+    const id = 1;
+
+    // Act
+    deleteOneItem(id);
+    // Assert
+    expect(localStorage.getItem("ToDo")).toBe(
+      '[{"index":0,"description":"hana","completed":false},{"index":1,"description":"hayat","completed":false}]'
+    );
+  });
+});
+
+describe("Test after removing from localStorage remove from  DOM function", () => {
+  test("remove 1 li element to ul", () => {
+    // Arrange
+    document.body.innerHTML = "<ul class='toDoList'></ul>";
+    displayToDo();
+    // Act
+    const items = document.querySelectorAll("li");
+    // Assert
+    expect(items).toHaveLength(2);
   });
 });
