@@ -4,10 +4,12 @@
 
 import {
   saveTodo,
-  displayToDo,
   deleteOneItem,
+  displayToDo,
   checkedItems,
   uncheckedItems,
+  clearAllCompleted,
+  editOneItem,
 } from "../modules/diplayAll.js";
 
 describe("add to List , all has to be completed false and starts with index 0", () => {
