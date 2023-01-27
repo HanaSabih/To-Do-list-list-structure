@@ -109,3 +109,27 @@ describe("update unchecked completed status after being checked", () => {
     );
   });
 });
+
+describe("clear completed", () => {
+  test("should remove from the list on the local storage  the task of index 0 where it is true and it  should just  keep in the localstorage  and update the index of other task where it is false", () => {
+    // Act
+    clearAllCompleted();
+
+    // Assert
+    expect(localStorage.getItem("ToDo")).toBe(
+      JSON.stringify([{ index: 0, description: "hayat", completed: false }])
+    );
+  });
+});
+
+describe("edit a task description", () => {
+  test('edit the description of a task  task index 0 from "hayat" to "edited" and check if it changes in localstorage', () => {
+    // Act
+    editOneItem("edited", 0);
+
+    // Assert
+    expect(localStorage.getItem("ToDo")).toContain(
+      JSON.stringify({ index: 0, description: "edited", completed: false })
+    );
+  });
+});
